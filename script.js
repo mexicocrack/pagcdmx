@@ -2,6 +2,7 @@ function actualizarHoraCDMX() {
   const horaCDMXElement = document.getElementById("hora-cdmx");
   const ahoraCDMX = moment.tz("America/Mexico_City").format("HH:mm:ss");
   horaCDMXElement.textContent = "Hora CDMX: " + ahoraCDMX;
+  horaCDMXElement.style.color = "#fff"; /* Color blanco para la hora */
 }
 
 // Actualizar la hora cada segundo
