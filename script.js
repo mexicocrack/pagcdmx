@@ -1,7 +1,7 @@
 function actualizarHoraCDMX() {
-    const horaCDMXElement = document.getElementById('hora-cdmx');
-    const ahoraCDMX = moment.tz('America/Mexico_City').format('HH:mm:ss');
-    horaCDMXElement.textContent = 'Hora CDMX: ' + ahoraCDMX;
+  const horaCDMXElement = document.getElementById("hora-cdmx");
+  const ahoraCDMX = moment.tz("America/Mexico_City").format("HH:mm:ss");
+  horaCDMXElement.textContent = "Hora CDMX: " + ahoraCDMX;
 }
 
 // Actualizar la hora cada segundo
