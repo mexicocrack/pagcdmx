@@ -1,14 +1,12 @@
-function actualizarHoraCDMX() {
-  const horaCDMXElement = document.getElementById("hora-cdmx");
-  const ahoraCDMX = moment.tz("America/Mexico_City").format("HH:mm:ss");
-  horaCDMXElement.textContent = "Hora CDMX: " + ahoraCDMX;
-  horaCDMXElement.style.color = "#fff"; /* Color blanco para la hora */
+moment.locale("es");
+
+function updateTime() {
+  const now = moment().tz("America/Mexico_City");
+  document.getElementById("cdmx-time").textContent = now.format(
+    "dddd D/MM/YYYY · HH:mm:ss"
+  );
 }
 
-// Actualizar la hora cada segundo
-setInterval(actualizarHoraCDMX, 1000);
-
-// Inicializar la hora al cargar la página
-actualizarHoraCDMX();
-
-console.log("¡La página está en proceso de desarrollo!");
+// Actualizar cada segundo
+updateTime();
+setInterval(updateTime, 1000);
