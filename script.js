@@ -6,7 +6,7 @@ function actualizarHoraCDMX() {
 }
 
 function actualizarTemporizador() {
-  const fechaFinal = moment("2025-11-27T00:00:00"); // Jueves 27 de noviembre de 2025
+  const fechaFinal = moment("2025-11-27T15:00:00"); // Jueves 27 de noviembre de 2025 a las 3:00 PM
   const ahora = moment();
   const diferencia = moment.duration(fechaFinal.diff(ahora));
 
