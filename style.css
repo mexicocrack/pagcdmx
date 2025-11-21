@@ -1,101 +1,83 @@
-* {
-  box-sizing: border-box;
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Fondo */
-body {
-  background: #0b1623;
-  color: white;
-  min-height: 100vh;
+  background: linear-gradient(45deg, #49a09d, #5f2c82); /* Fondo degradado */
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite; /* Animación del fondo */
+  color: #fff; /* Color de texto blanco para contrastar */
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  min-height: 100vh;
+  overflow: hidden; /* Oculta cualquier desbordamiento */
 }
 
-/* Barra superior */
-.topbar {
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+header {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Fondo semi-transparente para el header */
+  color: #fff;
+  padding: 10px 20px;
+  text-align: left;
+  width: 100%;
   position: fixed;
-  top: 10px;
-  left: 10px;
-  right: 10px;
+  top: 0;
+  left: 0;
+  z-index: 100;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
-.brand {
-  font-size: 20px;
-  font-weight: 900;
-  color: #2bb7ff;
-  text-shadow: 0 0 6px #2bb7ff;
-}
-
-.timebox {
-  text-align: right;
-  font-size: 14px;
-}
-
-/* Tarjeta central */
-.card {
-  width: 100%;
-  max-width: 600px;
-  background: #102030;
-  padding: 40px;
-  border-radius: 16px;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+main {
+  padding: 20px;
   text-align: center;
+  margin-top: 60px; /* Ajuste para evitar que el contenido se oculte detrás del header */
 }
 
-/* Texto principal */
-.status {
-  font-size: 42px;
-  font-weight: 800;
-  color: #2bb7ff;
-  text-shadow: 0 0 10px #2bb7ff;
-  animation: glow 2s infinite ease-in-out;
+h2 {
+  font-size: 2.5em;
+  color: #3498db;
+  text-shadow: 0 0 20px #3498db;
+  margin-bottom: 20px;
 }
 
-@keyframes glow {
-  0% {
-    text-shadow: 0 0 8px #2bb7ff;
-  }
-  50% {
-    text-shadow: 0 0 18px #2bb7ff;
-  }
-  100% {
-    text-shadow: 0 0 8px #2bb7ff;
-  }
+#temporizador {
+  font-size: 2em;
+  color: #fff;
 }
 
-.subtext {
-  margin-top: 10px;
-  opacity: 0.85;
-}
-
-/* Fechas */
-.dates {
-  margin-top: 25px;
-  background: #1a2d45;
-  padding: 15px;
-  border-radius: 10px;
-  font-size: 15px;
-}
-
-/* Adaptación a móvil */
-@media (max-width: 480px) {
-  .status {
-    font-size: 32px;
-  }
-
-  .card {
-    padding: 25px;
-  }
-
-  .brand {
-    font-size: 16px;
-  }
+footer {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Fondo semi-transparente para el footer */
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
